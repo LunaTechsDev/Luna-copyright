@@ -2,7 +2,7 @@
 // Luna_CopyrightMV.js
 //=============================================================================
 //=============================================================================
-// Build Date: 2020-09-13 22:26:17
+// Build Date: 2020-10-24 20:25:19
 //=============================================================================
 //=============================================================================
 // Made with LunaTea -- Haxe
@@ -164,7 +164,6 @@ class WindowCopyright extends Window_Base {
 	}
 	drawVersionText() {
 		this.contents.fontSize = LunaCopyright.CParams.fontSize
-		this.makeFontBigger()
 		let fontFace = LunaCopyright.CParams.fontFace
 		if(fontFace != null || fontFace.length > 0) {
 			this.contents.fontFace = fontFace
@@ -365,7 +364,7 @@ class FontManager {
 		throw haxe_Exception.thrown(["LoadError",url,retry])
 	}
 	static makeUrl(fileName) {
-		return "fonts/" + Std.string(encodeURIComponent(fileName).replace(/%2F/g, "/"););
+		return "fonts/" + Std.string(encodeURIComponent(fileName).replace(/%2F/g, "/"));
 	}
 	static load(family,filename) {
 		if(FontManager._states[family] != "loaded") {
@@ -414,7 +413,7 @@ class FontManager {
 		throw haxe_Exception.thrown(["LoadError",url,retry])
 	}
 	static makeUrl(fileName) {
-		return "fonts/" + Std.string(encodeURIComponent(fileName).replace(/%2F/g, "/"););
+		return "fonts/" + Std.string(encodeURIComponent(fileName).replace(/%2F/g, "/"));
 	}
 }
 $hx_exports["FontManager"] = FontManager
